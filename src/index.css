@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --brand-gold: #E8A000;
+    --deep-amber: #C27A00;
+    --dark-peanut: #3D2B1F;
+    --rich-brown: #5C3D1E;
+    --cream: #FFF8F0;
+    --warm-beige: #F5E6D0;
+    --soft-gold: #FFD980;
+    --light-tan: #E8D5B8;
+    --background: 30 60% 97%;
+    --foreground: 25 30% 18%;
+    --card: 0 0% 100%;
+    --card-foreground: 25 30% 18%;
+    --primary: 40 100% 45%;
+    --primary-foreground: 30 60% 97%;
+    --secondary: 30 40% 90%;
+    --secondary-foreground: 25 30% 18%;
+    --muted: 30 30% 88%;
+    --muted-foreground: 25 20% 35%;
+    --accent: 40 100% 45%;
+    --accent-foreground: 30 60% 97%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 30 30% 85%;
+    --input: 30 30% 85%;
+    --ring: 40 100% 45%;
+    --radius: 0.625rem;
+  }
+
+  html {
+    scroll-behavior: auto;
+  }
+
+  body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    background-color: var(--cream);
+    color: var(--rich-brown);
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+/* ===== CSS KEYFRAMES ===== */
+
+@keyframes cardFloat {
+  0%, 100% {
+    transform: rotateX(8deg) rotateY(-12deg);
+  }
+  25% {
+    transform: rotateX(-4deg) rotateY(8deg);
+  }
+  50% {
+    transform: rotateX(6deg) rotateY(-6deg);
+  }
+  75% {
+    transform: rotateX(-2deg) rotateY(4deg);
+  }
+}
+
+@keyframes scrollBounce {
+  0%, 100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(34px);
+    opacity: 0.5;
+  }
+}
+
+@keyframes slowRotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 0.8;
+  }
+}
+
+/* ===== CURTAIN / HERO INFINITY SCROLL ===== */
+
+.curtain {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  z-index: 1;
+  background: radial-gradient(ellipse at 50% 30%, #5C3D1E 0%, #3D2B1F 70%);
+}
+
+.curtain-glow {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 50% 30%, rgba(232, 160, 0, 0.15) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.vignette {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle, transparent 40%, #3D2B1F 100%);
+  mix-blend-mode: multiply;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.strips {
+  position: absolute;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2vw;
+}
+
+.strips:nth-child(1) { left: 20%; transform: translateX(-50%); }
+.strips:nth-child(2) { left: 50%; transform: translateX(-50%); }
+.strips:nth-child(3) { left: 80%; transform: translateX(-50%); }
+
+.strips:nth-child(odd) {
+  transform: translateX(-50%) translateY(-25vw);
+}
+
+.column {
+  width: 28vw;
+  flex-shrink: 0;
+}
+
+.column_inner {
+  transform: scale(0.25);
+  transform-origin: top center;
+  will-change: transform;
+}
+
+.column_inner img {
+  width: 100%;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 1vw;
+}
+
+/* ===== SCROLLBAR ===== */
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--cream);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--light-tan);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--brand-gold);
+}
+
+/* ===== SELECTION ===== */
+
+::selection {
+  background: rgba(232, 160, 0, 0.3);
+  color: var(--dark-peanut);
+}
+
+/* ===== REDUCED MOTION ===== */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
