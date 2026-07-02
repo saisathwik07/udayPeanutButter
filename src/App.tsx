@@ -133,11 +133,13 @@ const recipesDetail: Record<string, {
  * Testimonials — DATA PRESERVED for future use.
  * The testimonials section rendering is commented out below.
  */
+/*
 const _testimonials = [
   { quote: "The smoothest peanut butter I've ever tasted. You can really tell it's made with quality ingredients. My morning toast has never been better!", name: 'Priya Sharma', location: 'Mumbai', avatar: '/images/testimonial-1.jpg', rating: 5 },
   { quote: "As a fitness enthusiast, I love that Buttertofly is pure protein without any additives. The crunchy variant is my absolute favorite post-workout snack.", name: 'Arjun Patel', location: 'Bangalore', avatar: '/images/testimonial-2.jpg', rating: 5 },
   { quote: "My kids absolutely love the chocolate swirl! And I love that it's made with natural ingredients. Finally a peanut butter I feel good about serving my family.", name: 'Anita Desai', location: 'Delhi', avatar: '/images/testimonial-3.jpg', rating: 5 },
 ]
+*/
 
 /** Nutrition stats for the Nutrition section */
 const nutritionStats = [
