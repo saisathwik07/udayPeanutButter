@@ -17,7 +17,7 @@ const products = [
     name: 'Chocolate Peanut Butter',
     badge: 'Added Cocoa',
     desc: 'Smooth roasted peanut butter blended with premium cocoa for a rich chocolate flavor without compromising nutrition.',
-    price: '£8.99',
+    price: '£5.00',
     image: '/images/Screenshot 2026-07-27 223731.png',
   },
 ]
