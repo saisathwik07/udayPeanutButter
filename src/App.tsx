@@ -1666,6 +1666,72 @@ export default function App() {
         </div>
       </section>
 
+      {/* ===== FUN ABOUT SECTION (As requested) ===== */}
+      <section id="fun-about" className="relative" style={{ background: '#FFF8F0', padding: 'clamp(60px, 8vw, 120px) clamp(24px, 6vw, 96px)', zIndex: 10 }}>
+        <div className="max-w-[1200px] mx-auto">
+          <div className="text-center mb-16">
+            <h2 style={{ fontFamily: 'Outfit, sans-serif', fontWeight: 800, fontSize: 'clamp(32px, 4vw, 48px)', color: '#3D2B1F' }}>
+              My Diddys & Besties
+            </h2>
+            <p style={{ marginTop: 16, fontSize: 18, color: '#6B4E31', maxWidth: 600, margin: '16px auto 0' }}>
+              These are my besties for my business!
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-24">
+            <div>
+              <img src="/images/colin.jpeg" alt="Colin" style={{ width: '100%', borderRadius: 20, boxShadow: '0 20px 40px rgba(0,0,0,0.1)', objectFit: 'cover' }} />
+            </div>
+            <div>
+              <h3 style={{ fontSize: 28, fontWeight: 700, color: '#3D2B1F', marginBottom: 12 }}>Meet Colin</h3>
+              <p style={{ fontSize: 18, color: '#6B4E31', lineHeight: 1.6 }}>
+                The black guy is Colin. He is responsible for producing Vitamin D.
+              </p>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-24 flex-col-reverse md:flex-row-reverse">
+            <div style={{ order: 1 }} className="md:order-2">
+              <img src="/images/team.jpeg" alt="The Team" style={{ width: '100%', borderRadius: 20, boxShadow: '0 20px 40px rgba(0,0,0,0.1)', objectFit: 'cover' }} />
+            </div>
+            <div style={{ order: 2 }} className="md:order-1">
+              <h3 style={{ fontSize: 28, fontWeight: 700, color: '#3D2B1F', marginBottom: 12 }}>The Team</h3>
+              <p style={{ fontSize: 18, color: '#6B4E31', lineHeight: 1.6 }}>
+                This is our team pic! On the right is my ex-boyfriend, and in the middle is gay me.
+              </p>
+            </div>
+          </div>
+
+          <div className="text-center mb-12">
+            <h2 style={{ fontFamily: 'Outfit, sans-serif', fontWeight: 800, fontSize: 'clamp(32px, 4vw, 48px)', color: '#3D2B1F' }}>
+              My Childhood Story
+            </h2>
+            <p style={{ marginTop: 16, fontSize: 18, color: '#6B4E31', maxWidth: 800, margin: '16px auto 0', lineHeight: 1.6 }}>
+              and Doctors said, 'He's perfectly healthy.' Teachers said, 'Please stop talking.' Friends said, 'Bro, just buy a logo.' But he ignored everyone. After one life-changing spoonful of peanut butter and three motivational reels, he declared himself a visionary founder. The rest is LinkedIn history
+            </p>
+          </div>
+
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            <div className="text-center flex flex-col items-center">
+              <img src="/images/child1.jpeg" alt="Childhood 1" style={{ width: '100%', borderRadius: 16, boxShadow: '0 10px 20px rgba(0,0,0,0.1)' }} />
+              <p style={{ marginTop: 12, fontWeight: 600, fontSize: 18, color: '#3D2B1F' }}>model 1</p>
+            </div>
+            <div className="text-center flex flex-col items-center">
+              <img src="/images/child2.jpeg" alt="Childhood 2" style={{ width: '100%', borderRadius: 16, boxShadow: '0 10px 20px rgba(0,0,0,0.1)' }} />
+              <p style={{ marginTop: 12, fontWeight: 600, fontSize: 18, color: '#3D2B1F' }}>model 2</p>
+            </div>
+            <div className="text-center flex flex-col items-center">
+              <img src="/images/child3.jpeg" alt="Childhood 3" style={{ width: '100%', borderRadius: 16, boxShadow: '0 10px 20px rgba(0,0,0,0.1)' }} />
+              <p style={{ marginTop: 12, fontWeight: 600, fontSize: 18, color: '#3D2B1F' }}>model 3</p>
+            </div>
+            <div className="text-center flex flex-col items-center">
+              <img src="/images/child4.jpeg" alt="Childhood 4" style={{ width: '100%', borderRadius: 16, boxShadow: '0 10px 20px rgba(0,0,0,0.1)' }} />
+              <p style={{ marginTop: 12, fontWeight: 600, fontSize: 18, color: '#3D2B1F' }}>model 4</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* ===== CONTACT & FOOTER — New modern contact section with Buttertofly branding ===== */}
       <section id="contact" className="relative" style={{ background: '#3D2B1F', padding: 'clamp(60px, 8vw, 100px) clamp(24px, 6vw, 96px) clamp(24px, 3vw, 40px)', zIndex: 10 }} aria-label="Contact information">
         <div className="max-w-[1400px] mx-auto">
