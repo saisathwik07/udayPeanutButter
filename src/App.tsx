@@ -18,14 +18,7 @@ const products = [
     badge: 'Added Cocoa',
     desc: 'Smooth roasted peanut butter blended with premium cocoa for a rich chocolate flavor without compromising nutrition.',
     price: '£8.99',
-    image: '/images/product-chocolate.jpg',
-  },
-  {
-    name: 'Classic Peanut Butter',
-    badge: 'Bestseller',
-    desc: 'Pure roasted peanuts with a creamy texture and natural protein. No preservatives. No palm oil.',
-    price: '£12.99',
-    image: '/images/product-classic.jpg',
+    image: '/images/Screenshot 2026-07-27 223731.png',
   },
 ]
 
@@ -146,7 +139,7 @@ const nutritionStats = [
   { value: '25g', label: 'Protein', icon: 'M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5' },
   { value: '0g', label: 'Trans Fat', icon: 'M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z' },
   { value: '12g', label: 'Healthy Fats', icon: 'M13 2L3 14h9l-1 8 10-12h-9l1-8z' },
-  { value: '100%', label: 'Natural', icon: 'M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z' },
+  { value: '10g', label: 'Sugar', icon: 'M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z' },
 ]
 
 /* REMOVED: curtainImages array — hero simplified to a clean static image */
@@ -626,7 +619,7 @@ export default function App() {
               opacity: 0,
             }}
           >
-            PURE. NATURAL. POWERFUL.
+            one more spoon .....
           </div>
 
           {/* Main Heading — PEANUT GOODNESS as primary visual focus */}
@@ -635,7 +628,7 @@ export default function App() {
             style={{
               fontFamily: 'Inter, sans-serif',
               fontWeight: 900,
-              fontSize: 'clamp(46px, 7.5vw, 108px)',
+              fontSize: 'clamp(32px, 5vw, 76px)',
               lineHeight: 1.05,
               letterSpacing: '-0.04em',
               color: '#FFF8F0',
@@ -643,38 +636,23 @@ export default function App() {
               opacity: 0,
             }}
           >
-            PEANUT
+            Why choose between Indulgence
             <br />
-            <span style={{ color: '#E8A000' }}>GOODNESS</span>
+            <span style={{ color: '#E8A000' }}>and health?</span>
           </h1>
 
-          {/* Description */}
-          <p
-            className="hero-sub"
-            style={{
-              fontFamily: 'Inter, sans-serif',
-              fontWeight: 400,
-              fontSize: 'clamp(15px, 1.15vw, 19px)',
-              lineHeight: 1.9,
-              color: 'rgba(255,248,240,0.72)',
-              maxWidth: 400,
-              marginTop: 'clamp(24px, 3vw, 40px)',
-              opacity: 0,
-            }}
-          >
-            Crafted with sustainably sourced peanuts.<br />
-            Slow roasted. Stone ground. Rich in protein.
-          </p>
+          {/* Description removed as requested */}
 
           {/* Feature Icons Row */}
           <div
             className="hero-features flex flex-wrap gap-6"
-            style={{ marginTop: 'clamp(28px, 3.5vw, 48px)', opacity: 0 }}
+            style={{ marginTop: 'clamp(28px, 3.5vw, 48px)', opacity: 0, maxWidth: 650 }}
           >
             {[
-              { icon: 'M11 20A7 7 0 0 1 4 13C4 7 10 2 10 2s6 5 6 11a7 7 0 0 1-5 7v4h-2v-4z', label: '100% Natural' },
-              { icon: 'M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z M9 12l2 2 4-4', label: 'No Added Preservatives' },
-              { icon: 'M13 2L3 14h9l-1 8 10-12h-9l1-8z', label: 'Rich in Protein' },
+              { icon: 'M11 20A7 7 0 0 1 4 13C4 7 10 2 10 2s6 5 6 11a7 7 0 0 1-5 7v4h-2v-4z', label: 'BETTER INGREDIENTS' },
+              { icon: 'M4 4h16v16H4z M4 10h16 M10 4v16', label: 'RICH CHOCOLATE EXPERIENCE' },
+              { icon: 'M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm-3 10a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm6 4a2 2 0 1 1 0-4 2 2 0 0 1 0 4z', label: 'PEANUT-FORWARD RECIPE' },
+              { icon: 'M12 22a7 7 0 0 0 7-7c0-2-1-3.9-3-5.5s-3.5-4-4-6.5c-.5 2.5-2 4.9-4 6.5C6 11.1 5 13 5 15a7 7 0 0 0 7 7z M3 3l18 18', label: 'NO PALM OIL' },
             ].map(feat => (
               <div key={feat.label} className="flex items-center gap-2">
                 <div style={{
@@ -807,16 +785,16 @@ export default function App() {
           aria-hidden="true"
           style={{
             position: 'absolute',
-            right: 'clamp(100px, 12vw, 200px)',
-            bottom: 'clamp(200px, 22vh, 300px)',
+            right: 'clamp(40px, 6vw, 120px)',
+            top: '20%', /* Adjusted to be in the middle vertically instead of bottom */
             zIndex: 15,
             opacity: 0,
             pointerEvents: 'none',
           }}
         >
           <img
-            src="/images/hero-jar-foreground.jpg"
-            alt="Buttertofly Classic Peanut Butter jar"
+            src="/images/product-chocolate.jpeg"
+            alt="Buttertofly Chocolate Peanut Butter jar"
             style={{
               width: 'clamp(320px, 33vw, 500px)',
               height: 'auto',
